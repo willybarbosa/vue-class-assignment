@@ -1,36 +1,69 @@
 <html lang="en">
 <head>
-        <meta charset="utf-8" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+       
+    <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width,initial-scale=1.0" />
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     
-                             <title>Vue App</title>
-                            
-
+                           
+                        
 </head>
 
     <body>
-             <div id="app">
+        
+           <div class="container pt-5 pb-5"> 
+            <form id="app">
+            <h1>Barbosa college Student score board </h1>
+            <section>
+              <h3> login </h3>
+              <input type="text" aria-placeholder="student id" class="">
+            </section>
+
+            <section>
+              <h3> password</h3>
+              <input type="text" aria-placeholder="login password" class="">
+
+              <input type="email" aria-placeholder="email address" class="">
+            </section>
+
+            <section>
+              <h3> register </h3>
+              <textarea aria-placeholder="registration details" class=""></textarea>
+            </section>
+
+
+            
+          </form>
+
+          </div>
                  
-                {{message}}
 
-
-
-                <h1>My Name is : {{myname}}</h1>
-
-App Name :        {{message}}
-
-
-
-             </div>
+             
               <script>
                const App = new Vue({
                 el: '#app',
                 data: {
-             message: 'Hello Vue!',
-             myname: 'Kingsley'
+
+                  form: {
+
+                    register:null,
+                    guestlogin:null,
+                    studentlogin:null,
+                    password:null,
+                    email:null,
+
+                  }
+             
+             
             },
+            mounted(){
+
+              alert('It works');
+            }
           })
         </script>
       </body>
